@@ -6,7 +6,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     // Metadata.
     pkg: grunt.file.readJSON('package.json'),
-    banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
+    banner: '/*! svg.draggable.js - v<%= pkg.version %> - ' +
       '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
       '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
       '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
@@ -69,7 +69,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-bumper');
 
-  grunt.config('fileName', grunt.config('pkg').name.slice(0, -3));
+  grunt.config('fileName', 'svg.draggable');
 
   // Default task.
   grunt.registerTask('default', ['clean', 'copy', 'concat', 'uglify']);
